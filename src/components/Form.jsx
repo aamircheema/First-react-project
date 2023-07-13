@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const Form = ({ addStudent }) => {
-    const navigate = useNavigate();
+
+const Form = ({ addStudent, navigateToStudents }) => {
+
 
     const [name, setName] = useState('');
     const [rollnumber, setRollnumber] = useState('');
 
-    const navigateToStudents = () => {
-        navigate('/students'); // Navigate to '/students' after form submission
-    };
+
 
     const submitForm = (e) => {
         e.preventDefault();
