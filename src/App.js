@@ -11,6 +11,10 @@ function App() {
     setStudents([...students, student]);
   };
 
+  const navigateToStudents = () => {
+    window.location.href = '/students'; // Redirect to '/students' after form submission
+  };
+
   return (
     <Router>
       <div className="app">
@@ -26,7 +30,7 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<Form addStudent={addStudent} />} />
+          <Route path="/" element={<Form addStudent={addStudent} navigateToStudents={navigateToStudents} />} />
           <Route path="/students" element={<Students students={students} />} />
         </Routes>
       </div>
