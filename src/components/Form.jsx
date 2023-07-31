@@ -7,7 +7,7 @@ const Form = ({ addStudent, navigateToStudents }) => {
     const [name, setName] = useState('');
     const [rollnumber, setRollnumber] = useState('');
 
-
+ 
 
     const submitForm = (e) => {
         e.preventDefault();
